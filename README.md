@@ -2,6 +2,9 @@
 
 Lightweight, Minimal and Flexible WordPress theme.
 
+<img src="https://image.ibb.co/bYyQWn/1.png" />
+<img src="https://image.ibb.co/g06jP7/2.png" />
+
 ## Get started
 
 To get started with **Quickly**, you just need to download and import [this folder](https://github.com/mynameismaz/Quickly/archive/master.zip) in your **WordPress** dashboard, specifically in **Appearance** > **Themes**.
