@@ -7,7 +7,7 @@
 			// change the layout according to the user chose to get or not the sidebar 
 			// $activate_sidebar = esc_attr( get_option( 'sidebar-status' ) ); 
 			// print $activate_sidebar === 'yes' ? '<div class="col-12 col-md-8">' : '<div class="col-12 col-md-8 offset-md-2">'; 
-			print '<div class="col-12 col-md-8 offset-md-2">';
+			print '<main class="col-12 col-md-8 offset-md-2" role="main">';
 		?>
 			<!-- articles -->
 			<?php if ( have_posts() ): ?>
@@ -21,7 +21,7 @@
 				<?= get_previous_posts_link( __( 'Next', 'quicklytheme' ) ) ?>
 				<?= get_next_posts_link( __( 'Previous', 'quicklytheme' ) ) ?>
 			</div>
-		</div>
+		</main>
 
 		<?php 
 			// if the user wants a sidebar, give him/her a sidebar

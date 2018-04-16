@@ -10,11 +10,11 @@
 </head>
 <body <?php body_class(); ?>>
 
-	<main class="container-fluid">
+	<section class="container-fluid">
 	<!-- header section -->
-	<header>
+	<header role="banner">
 		<!-- navbar -->
-		<nav class="quickly-navbar">
+		<nav class="quickly-navbar" role="navigation">
 			<?php
 				// if there's a logo, use it... otherwise use the name of the website
 				$logo = empty(get_custom_logo()) ? '<a class="quickly-navbar-brand" href="'. get_home_url() .'">' . get_bloginfo('name') . '</a>' : get_custom_logo();
