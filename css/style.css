@@ -542,6 +542,10 @@ button {
 	letter-spacing: 0.005em;
 }
 
+.article .paragraph a {
+	text-decoration: underline !important;
+}
+
 .article h2:first-child {
 	margin-top: 10px;
 }
