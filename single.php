@@ -24,7 +24,9 @@
 							</article>
 							<!-- posts navigation -->
 							<div class="col-md-12 posts-navigation single-pagination clearfix">
+								<span class="sr-only">See previous post</span>
 								<?php previous_post_link( '%link' ); ?>
+								<span class="sr-only">See next post</span>
 								<?php next_post_link( '%link' ); ?>
 							<hr></div>
 							
