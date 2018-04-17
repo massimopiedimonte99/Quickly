@@ -20,7 +20,7 @@
 									$archive_month = get_the_time('m'); 
 									$archive_day   = get_the_time('d'); 
 								?>
-								<span class="article-credits">By <?= get_the_author_link(); ?> on <a href="<?= get_day_link( $archive_year, $archive_month, $archive_day); ?>"><?php the_date(); ?></a></span>
+								<span class="article-credits">By <?php echo get_the_author_link(); ?> on <a href="<?php echo get_day_link( $archive_year, $archive_month, $archive_day); ?>"><?php the_date(); ?></a></span>
 							</article>
 							<!-- posts navigation -->
 							<div class="col-md-12 posts-navigation single-pagination clearfix">

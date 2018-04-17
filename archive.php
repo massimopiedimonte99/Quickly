@@ -17,8 +17,8 @@
 
 			<!-- posts navigation -->
 			<div class="col-md-8 posts-navigation clearfix">
-				<a href="#" class="pagination-link older"><?= get_previous_posts_link( 'Next' ) ?></a>
-				<a href="#" class="pagination-link newer"><?= get_next_posts_link( 'Previous' ) ?></a>
+				<a href="#" class="pagination-link older"><?php echo get_previous_posts_link( 'Next' ) ?></a>
+				<a href="#" class="pagination-link newer"><?php echo get_next_posts_link( 'Previous' ) ?></a>
 			</div>
 		</div>
 			

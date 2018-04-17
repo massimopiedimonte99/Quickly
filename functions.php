@@ -15,6 +15,10 @@
 	// enqueue scripts
 	function quickly_enqueue_scripts() {
 
+		// default wp script
+		if ( is_singular() && comments_open() && get_option('thread_comments') )
+  		wp_enqueue_script( 'comment-reply' );
+
 		// css quickly
 		wp_register_style( 'quickly', get_template_directory_uri() . '/css/style.css', [], '1.0.0', 'all' );
 		wp_enqueue_style( 'quickly' );
@@ -44,9 +48,9 @@
 	// sidebar
 	function quickly_register_sidebar() {
 		$args = array(
-			'name'          => __( "Quickly's Sidebar", 'quickly' ),
+			'name'          => __( "Quickly's Sidebar", 'quicklytheme' ),
 			'id'            => 'quickly-sidebar',
-			'description'   => __("Flexible, Lightweight and Minimal sidebar for your website by Quickly", 'quickly' )
+			'description'   => __("Flexible, Lightweight and Minimal sidebar for your website by Quickly", 'quicklytheme' )
 		);
 		
 		// check whether the sidebar has been activated or not by the user
@@ -143,13 +147,13 @@
             if ( $args['avatar_size'] != 0 ) {
                 echo get_avatar( $comment, 150, $default, $alt, array( 'class' => array( 'img-thumbnail', 'rounded-circle' ) ) ); 
             } 
-            printf( __( '<cite class="fn">%s</cite>' ), get_comment_author_link() ); ?>
+            printf( __( '<cite class="fn">%s</cite>', 'quicklytheme' ), get_comment_author_link() ); ?>
         </div>
 
         <?php comment_text(); ?>
         <?php 
         if ( $comment->comment_approved == '0' ) { ?>
-            <p class="comment-awaiting-moderation"><em style="opacity: .5;"><?php _e( 'Your comment is awaiting moderation.' ); ?></em></p><?php 
+            <p class="comment-awaiting-moderation"><em style="opacity: .5;"><?php _e( 'Your comment is awaiting moderation.', 'quicklytheme' ); ?></em></p><?php 
         } ?>
 
         <div class="reply"><?php 

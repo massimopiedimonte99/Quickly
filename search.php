@@ -10,7 +10,7 @@
 		?>
 			<!-- articles -->
 			<?php if ( have_posts() ): ?>
- 				<h3 class="page-title text-center"><?php printf( __( 'Search Results for: %s', 'quickly' ), '<span>' . get_search_query() . '</span>' ); ?></h3><hr>
+ 				<h3 class="page-title text-center"><?php printf( __( 'Search Results for: %s', 'quicklytheme' ), '<span>' . get_search_query() . '</span>' ); ?></h3><hr>
 				<?php while( have_posts() ): the_post(); ?>
 					<?php get_template_part( 'template_parts/content', get_post_format() ); ?>
 				<?php endwhile; ?>
@@ -18,8 +18,8 @@
 
 			<!-- posts navigation -->
 			<div class="col-md-8 posts-navigation clearfix">
-				<?= get_previous_posts_link( 'Next' ) ?>
-				<?= get_next_posts_link( 'Previous' ) ?>
+				<?php echo get_previous_posts_link( 'Next' ) ?>
+				<?php echo get_next_posts_link( 'Previous' ) ?>
 			</div>
 		</div>
 

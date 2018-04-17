@@ -1,5 +1,6 @@
 /* general */
-.sep { padding-bottom: 80px;  }
+.sep { padding-bottom: 80px; }
+.gallery-caption, .bypostauthor {}
 
 a:not(.quickly-navbar-brand):not(.taxonomies-category) {
 	color: #3e3e3e !important;	

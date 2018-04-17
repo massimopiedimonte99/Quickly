@@ -8,6 +8,6 @@
 			return $videoLink;
 		}
 	?>
-	<iframe width="100%" height="400" src="<?= quickly_get_embed(); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-	<span class="article-credits">By <?= get_the_author_link(); ?> on <a href="<?= get_day_link( $archive_year, $archive_month, $archive_day); ?>"><?php the_date(); ?></a></span>
+	<iframe width="100%" height="400" src="<?php echo quickly_get_embed(); ?>" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	<span class="article-credits">By <?php echo get_the_author_link(); ?> on <a href="<?php echo get_day_link( $archive_year, $archive_month, $archive_day); ?>"><?php the_date(); ?></a></span>
 </div>
