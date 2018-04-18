@@ -222,7 +222,7 @@
 		]);
 
 		// Main Cover
-		$wp_customize->add_setting('main_cover' , [ 'transport' => 'refresh' ]);
+		$wp_customize->add_setting('main_cover' , [ 'transport' => 'refresh', 'sanitize_callback' => 'quickly_customize_register__sanitize' ]);
 
 		$wp_customize->add_control(new WP_Customize_Image_Control( 
 			$wp_customize, 'header_main_cover', [
@@ -232,6 +232,21 @@
 				'settings'   	=> 'main_cover',
 			]
 		));
+	}
+
+	function quickly_customize_register__sanitize( $file, $mimes ) {
+		 //allowed file types
+      $mimes = array(
+	      'jpg|jpeg|jpe' => 'image/jpeg',
+	      'gif'          => 'image/gif',
+	      'png'          => 'image/png'
+      );
+       
+      //check file type from file name
+      $file_ext = wp_check_filetype( $file, $mimes );
+       
+      //if file has a valid mime type return it, otherwise return default
+      return ( $file_ext['ext'] ? $file : $setting->default );
 	}
 
 		// add contact form shortcode
