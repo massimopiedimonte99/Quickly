@@ -278,8 +278,9 @@
 
 		return $html;
 	}
-
-	add_shortcode('c-form', 'quickly_contact_form'); // add contact form shortcode
+	
+	// removed shortcode due to "plugin_territory feature"
+	// add_shortcode('c-form', 'quickly_contact_form'); // add contact form shortcode
 
 	// hooks
 	add_action( 'wp_enqueue_scripts', 'quickly_enqueue_scripts' ); // include scripts
