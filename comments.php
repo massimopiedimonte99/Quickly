@@ -36,6 +36,9 @@
 		<ul class="comment-list">
 			<?php wp_list_comments( 'type=comment&callback=quickly_list_comments&max_depth=2' ); ?>
 		</ul>
+		
+		<!-- comment pagination -->
+		<?php paginate_comments_links(); ?>
 	<?php endif; ?>
 	
 </div>

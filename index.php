@@ -1,6 +1,8 @@
 <?php get_header(); ?>
 <?php get_template_part( 'template_parts/header/cover', 'index' ); ?>
 
+<?php if ( ! isset( $content_width ) ) $content_width = 900; ?>
+
 <section class="container">
 	<div class="row">
 		<?php
@@ -20,6 +22,7 @@
 			<div class="col-md-8 posts-navigation clearfix">
 				<?php echo get_previous_posts_link( sprintf( __( 'Next%s', 'quicklytheme' ), '<span class="sr-only">'.__('See next articles', 'quicklytheme').'</span>' ) ) ?>
 				<?php echo get_next_posts_link( sprintf( __( 'Previous', 'quicklytheme' ), '<span class="sr-only">'.__('See previous articles', 'quicklytheme').'</span>' ) ) ?>
+				<?php wp_link_pages([]);  ?>
 			</div>
 		</main>
 

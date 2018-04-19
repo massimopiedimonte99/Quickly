@@ -281,9 +281,6 @@
 
 	add_shortcode('c-form', 'quickly_contact_form'); // add contact form shortcode
 
-	// remove wp toolbar
-	show_admin_bar(false);
-
 	// hooks
 	add_action( 'wp_enqueue_scripts', 'quickly_enqueue_scripts' ); // include scripts
 	add_action( 'after_setup_theme', 'quickly_register_navbar' ); // register navbar

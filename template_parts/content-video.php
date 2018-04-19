@@ -1,4 +1,4 @@
-<div class="col-md-12 article pf-video">
+<div class="col-md-12 article pf-video" <?php post_class(); ?>>
 	<?php
 		// get embedded YT videos
 		function quickly_get_embed(){

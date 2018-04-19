@@ -12,7 +12,7 @@
 								<?php the_tags( '', ' ', '' ); ?>
 							</div>
 							<!-- article -->
-							<article class="col-md-12 article">
+							<article class="col-md-12 article" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 								<?php the_content(); ?>
 								<?php
 									// date link informations
