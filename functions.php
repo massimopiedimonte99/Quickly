@@ -249,7 +249,7 @@
       return ( $file_ext['ext'] ? $file : $setting->default );
 	}
 
-		// add contact form shortcode
+	// add contact form shortcode
 	function quickly_contact_form() {
 		$html =  '
 			<div class="col-12 quickly-contact-form-container">
