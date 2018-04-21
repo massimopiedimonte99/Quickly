@@ -26,7 +26,7 @@
 		wp_enqueue_style( 'quickly' );
 
 		// font awesome
-		wp_register_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', [], '4.7.0', 'all' );
+		wp_register_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome/css/font-awesome.min.css', [], '4.7.0', 'all' );
 		wp_enqueue_style( 'font-awesome' );
 
 		// css bootstrap
