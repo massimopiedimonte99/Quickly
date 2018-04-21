@@ -22,7 +22,7 @@
   		wp_enqueue_script( 'comment-reply' );
 
 		// css quickly
-		wp_register_style( 'quickly', get_template_directory_uri() . '/css/style.css', [], '1.0.0', 'all' );
+		wp_register_style( 'quickly', get_template_directory_uri() . '/css/quickly.css', [], '1.0.0', 'all' );
 		wp_enqueue_style( 'quickly' );
 
 		// font awesome
