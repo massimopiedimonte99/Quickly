@@ -6,11 +6,13 @@
 	// basic theme support
 	add_theme_support( 'custom-background' );
 	add_theme_support( 'custom-logo' );
+	add_theme_support( "custom-header", [] ); 
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'post-formats', [ 'standard', 'image', 'video', 'quote', 'link' ] );
 	add_theme_support( 'html5', array('search-form', 'post-thumbnails',  'comment-list') );
+	add_editor_style();
 
 	// enqueue scripts
 	function quickly_enqueue_scripts() {
