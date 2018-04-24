@@ -14,7 +14,7 @@
 		<h2 class="heading single-sub-heading"><?php echo $subtitle ?></h2>
 		<!-- social icons -->
 		<!-- <div class="social-icons"> -->
-			<?php $permalink = get_permalink(); ?>
+			<?php // $permalink = get_permalink(); ?>
 <!-- 			<a href="<?php echo 'https://www.facebook.com/sharer/sharer.php?u='. $permalink .'' ?>" target="_blank"><span class="fa fa-facebook"></span></a>
 			<a href="<?php echo 'https://plus.google.com/share?url=' . $permalink .'' ?>" target="_blank"><span class="fa fa-google-plus"></span></a>
 			<a href="<?php echo 'https://twitter.com/intent/tweet?text=Hey, read this article by '. get_the_author() .': '. get_the_title() .'&amp;url='. $permalink ?>" target="_blank"><span class="fa fa-twitter"></span></a>
