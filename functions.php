@@ -219,9 +219,9 @@
 	// customization API
 	function quickly_customize_register( $wp_customize ) {
 		$wp_customize->add_section( 'quickly_customization_api' , array(
-    	'title'      => __( 'Quickly', 'quickly' ),
-    	'priority'   => 30,
-		);
+	    	'title'      => __( 'Quickly', 'quickly' ),
+	    	'priority'   => 30,
+		));
 
 		// Main Cover
 		$wp_customize->add_setting('main_cover' , array( 'transport' => 'refresh', 'sanitize_callback' => 'quickly_customize_register__sanitize' ));
