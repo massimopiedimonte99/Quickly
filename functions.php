@@ -176,45 +176,45 @@
 	}
 	
 	// custom metabox to add subtitle in article
-	function quickly_article_subtitle() {
-		add_meta_box( 'quickly_article_sub', "Quickly's Subtitle", 'quickly_article_subtitle__html', 'post', 'side', 'high' );
-	}
+	// function quickly_article_subtitle() {
+	// 	add_meta_box( 'quickly_article_sub', "Quickly's Subtitle", 'quickly_article_subtitle__html', 'post', 'side', 'high' );
+	// }
 
-	function quickly_article_subtitle__html() {
-		global $post;  
-		$meta = get_post_meta( $post->ID, 'quickly_fields', true );
-		echo '<input type="hidden" name="quickly_nonce" value="'.wp_create_nonce( basename(__FILE__) ).'">';
+	// function quickly_article_subtitle__html() {
+	// 	global $post;  
+	// 	$meta = get_post_meta( $post->ID, 'quickly_fields', true );
+	// 	echo '<input type="hidden" name="quickly_nonce" value="'.wp_create_nonce( basename(__FILE__) ).'">';
 		
-		// actual text subtitle
-		$subtitle_value = !empty( $meta['subtitle'] ) ? $meta['subtitle'] : ''; 
-		echo '<div class="form-group">';
-			echo '<label for="quickly_fields[subtitle]" style="display:none;">Subtitle</label>';
-			echo '<input type="text" id="quickly_fields[subtitle]" class="form-control" name="quickly_fields[subtitle]" value="'. $subtitle_value .'" placeholder="Eg. The most complete article about penguins!" style="width: 100%;">';
-		echo "</div>";
-	}
+	// 	// actual text subtitle
+	// 	$subtitle_value = !empty( $meta['subtitle'] ) ? $meta['subtitle'] : ''; 
+	// 	echo '<div class="form-group">';
+	// 		echo '<label for="quickly_fields[subtitle]" style="display:none;">Subtitle</label>';
+	// 		echo '<input type="text" id="quickly_fields[subtitle]" class="form-control" name="quickly_fields[subtitle]" value="'. $subtitle_value .'" placeholder="Eg. The most complete article about penguins!" style="width: 100%;">';
+	// 	echo "</div>";
+	// }
 
-	// save metabox fields
-	function quickly_metabox_save_fields( $post_id ) {  
-		// verify nonce
-		if ( !wp_verify_nonce( $_POST['quickly_nonce'], basename(__FILE__) ) ) return $post_id; 
+	// // save metabox fields
+	// function quickly_metabox_save_fields( $post_id ) {  
+	// 	// verify nonce
+	// 	if ( !wp_verify_nonce( $_POST['quickly_nonce'], basename(__FILE__) ) ) return $post_id; 
 
-		// check autosave
-		if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return $post_id;
+	// 	// check autosave
+	// 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) return $post_id;
 		
-		// check permissions
-		if ( 'page' === $_POST['post_type'] ) {
-			if ( !current_user_can( 'edit_page', $post_id ) ) return $post_id;
-			elseif ( !current_user_can( 'edit_post', $post_id ) ) return $post_id;
-		}
+	// 	// check permissions
+	// 	if ( 'page' === $_POST['post_type'] ) {
+	// 		if ( !current_user_can( 'edit_page', $post_id ) ) return $post_id;
+	// 		elseif ( !current_user_can( 'edit_post', $post_id ) ) return $post_id;
+	// 	}
 		
-		// replace old data w/h the new ones
-		$old = get_post_meta( $post_id, 'quickly_fields', true );
-		$new = $_POST['quickly_fields'];
+	// 	// replace old data w/h the new ones
+	// 	$old = get_post_meta( $post_id, 'quickly_fields', true );
+	// 	$new = $_POST['quickly_fields'];
 		
-		// update/delete metabox values
-		if ( $new && $new !== $old ) update_post_meta( $post_id, 'quickly_fields', $new );
-		elseif ( '' === $new && $old ) delete_post_meta( $post_id, 'quickly_fields', $old );
-	}
+	// 	// update/delete metabox values
+	// 	if ( $new && $new !== $old ) update_post_meta( $post_id, 'quickly_fields', $new );
+	// 	elseif ( '' === $new && $old ) delete_post_meta( $post_id, 'quickly_fields', $old );
+	// }
 
 	// customization API
 	function quickly_customize_register( $wp_customize ) {
@@ -252,34 +252,34 @@
 	}
 
 	// add contact form shortcode
-	function quickly_contact_form() {
-		$html =  '
-			<div class="col-12 quickly-contact-form-container">
-				<form action="#" class="quickly-contact-form">
-					<div class="row">
-						<div class="col-12 col-md-6 quickly-inline-form">
-							<div class="form-group">
-								<label class="sr-only" for="email"></label>
-								<input id="email" name="email" type="text" class="form-control" placeholder="Eg. mark@gmail.com" value="" size="30">
-							</div>
-						</div>
-						<div class="col-12 col-md-6 quickly-inline-form">
-							<div class="form-group">
-								<label class="sr-only" for="name"></label>
-								<input id="name" name="text" type="text" class="form-control" placeholder="Eg. Mark Johnas" value="" size="30">
-							</div>
-						</div>
-					</div>
-					<div class="form-group">
-						<label class="sr-only" for="message"></label>
-						<textarea name="message" id="message" cols="30" rows="5" class="form-control" placeholder="'.__( 'Hi, i read your article about...', 'quickly' ).'"></textarea>
-					</div>
-					<button type="submit" class="btn btn-outline-secondary quickly-btn">'.__( 'Get in touch!', 'quickly' ).'</button>
-				</form>
-			</div>';
+	// function quickly_contact_form() {
+	// 	$html =  '
+	// 		<div class="col-12 quickly-contact-form-container">
+	// 			<form action="#" class="quickly-contact-form">
+	// 				<div class="row">
+	// 					<div class="col-12 col-md-6 quickly-inline-form">
+	// 						<div class="form-group">
+	// 							<label class="sr-only" for="email"></label>
+	// 							<input id="email" name="email" type="text" class="form-control" placeholder="Eg. mark@gmail.com" value="" size="30">
+	// 						</div>
+	// 					</div>
+	// 					<div class="col-12 col-md-6 quickly-inline-form">
+	// 						<div class="form-group">
+	// 							<label class="sr-only" for="name"></label>
+	// 							<input id="name" name="text" type="text" class="form-control" placeholder="Eg. Mark Johnas" value="" size="30">
+	// 						</div>
+	// 					</div>
+	// 				</div>
+	// 				<div class="form-group">
+	// 					<label class="sr-only" for="message"></label>
+	// 					<textarea name="message" id="message" cols="30" rows="5" class="form-control" placeholder="'.__( 'Hi, i read your article about...', 'quickly' ).'"></textarea>
+	// 				</div>
+	// 				<button type="submit" class="btn btn-outline-secondary quickly-btn">'.__( 'Get in touch!', 'quickly' ).'</button>
+	// 			</form>
+	// 		</div>';
 
-		return $html;
-	}
+	// 	return $html;
+	// }
 	
 	// removed shortcode due to "plugin_territory feature"
 	// add_shortcode('c-form', 'quickly_contact_form'); // add contact form shortcode
@@ -297,6 +297,6 @@
 	// add_action( 'admin_menu', 'quickly_menu_page' ); // Quickly submenu in the settings menu
 	// add_action( 'admin_init', 'quickly_menu_page__settings' ); // Quickly submenu in the settings menu
 	add_filter( 'comment_form_defaults', 'quickly_button_comment_form' ); // change class of comment button
-	add_action( 'add_meta_boxes', 'quickly_article_subtitle' ); // add subtitle in the article through custom metabox
+	// add_action( 'add_meta_boxes', 'quickly_article_subtitle' ); // add subtitle in the article through custom metabox
 	add_action( 'save_post', 'quickly_metabox_save_fields' ); // save metabox fields
 	add_action( 'customize_register', 'quickly_customize_register' ); // customization API
