@@ -30,7 +30,7 @@
 		wp_enqueue_style( 'font-awesome' );
 
 		// css bootstrap
-		wp_register_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css', [], '4.0.0', 'all' );
+		wp_register_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', [], '4.0.0', 'all' );
 		wp_enqueue_style( 'bootstrap' );
 
 		// js bootstrap
@@ -298,5 +298,5 @@
 	// add_action( 'admin_init', 'quickly_menu_page__settings' ); // Quickly submenu in the settings menu
 	add_filter( 'comment_form_defaults', 'quickly_button_comment_form' ); // change class of comment button
 	// add_action( 'add_meta_boxes', 'quickly_article_subtitle' ); // add subtitle in the article through custom metabox
-	add_action( 'save_post', 'quickly_metabox_save_fields' ); // save metabox fields
+	// add_action( 'save_post', 'quickly_metabox_save_fields' ); // save metabox fields
 	add_action( 'customize_register', 'quickly_customize_register' ); // customization API
