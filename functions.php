@@ -6,7 +6,7 @@
 	// basic theme support
 	add_theme_support( 'custom-background' );
 	add_theme_support( 'custom-logo' );
-	add_theme_support( "custom-header", [] ); 
+	add_theme_support( "custom-header", array() ); 
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'post-thumbnails' );
@@ -22,15 +22,15 @@
   		wp_enqueue_script( 'comment-reply' );
 
 		// css quickly
-		wp_register_style( 'quickly', get_template_directory_uri() . '/css/quickly.css', [], '1.0.0', 'all' );
+		wp_register_style( 'quickly', get_template_directory_uri() . '/css/quickly.css', array(), '1.0.0', 'all' );
 		wp_enqueue_style( 'quickly' );
 
 		// font awesome
-		wp_register_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome/css/font-awesome.min.css', [], '4.7.0', 'all' );
+		wp_register_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome/css/font-awesome.min.css', array(), '4.7.0', 'all' );
 		wp_enqueue_style( 'font-awesome' );
 
 		// css bootstrap
-		wp_register_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', [], '4.0.0', 'all' );
+		wp_register_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.min.css', array(), '4.0.0', 'all' );
 		wp_enqueue_style( 'bootstrap' );
 
 		// js bootstrap
@@ -218,21 +218,21 @@
 
 	// customization API
 	function quickly_customize_register( $wp_customize ) {
-		$wp_customize->add_section( 'quickly_customization_api' , [
+		$wp_customize->add_section( 'quickly_customization_api' , array(
     	'title'      => __( 'Quickly', 'quickly' ),
     	'priority'   => 30,
-		]);
+		);
 
 		// Main Cover
-		$wp_customize->add_setting('main_cover' , [ 'transport' => 'refresh', 'sanitize_callback' => 'quickly_customize_register__sanitize' ]);
+		$wp_customize->add_setting('main_cover' , array( 'transport' => 'refresh', 'sanitize_callback' => 'quickly_customize_register__sanitize' ));
 
 		$wp_customize->add_control(new WP_Customize_Image_Control( 
-			$wp_customize, 'header_main_cover', [
+			$wp_customize, 'header_main_cover', array(
 				'label'      	=> __( 'Main Cover', 'quickly' ),
 				'description' => __( 'Set a cover image that all your visitors will see...', 'quickly' ),
 				'section'    	=> 'quickly_customization_api',
 				'settings'   	=> 'main_cover',
-			]
+			)
 		));
 	}
 
