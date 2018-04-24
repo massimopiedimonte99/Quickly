@@ -17,7 +17,7 @@
 		<nav class="quickly-navbar" role="navigation">
 			<?php
 				// if there's a logo, use it... otherwise use the name of the website
-				$logo = empty(get_custom_logo()) ? '<a class="quickly-navbar-brand" href="'. get_home_url() .'">' . get_bloginfo('name') . '</a>' : get_custom_logo();
+				$logo = empty(get_custom_logo()) ? '<a class="quickly-navbar-brand" href="'. esc_url( home_url() )  .'">' . get_bloginfo('name') . '</a>' : get_custom_logo();
 			?>
 			<?php print $logo ?>
 		  <section class="quickly-navbar-hamburger-menu">
