@@ -20,8 +20,8 @@
 
 			<!-- posts navigation -->
 			<div class="col-md-8 posts-navigation clearfix">
-				<?php echo get_previous_posts_link( sprintf( __( 'Next%s', 'quicklytheme' ), '<span class="sr-only">'.__('See next articles', 'quicklytheme').'</span>' ) ) ?>
-				<?php echo get_next_posts_link( sprintf( __( 'Previous', 'quicklytheme' ), '<span class="sr-only">'.__('See previous articles', 'quicklytheme').'</span>' ) ) ?>
+				<?php echo get_previous_posts_link( sprintf( __( 'Next%s', 'quickly' ), '<span class="sr-only">'.__('See next articles', 'quickly').'</span>' ) ) ?>
+				<?php echo get_next_posts_link( sprintf( __( 'Previous', 'quickly' ), '<span class="sr-only">'.__('See previous articles', 'quickly').'</span>' ) ) ?>
 				<?php wp_link_pages([]);  ?>
 			</div>
 		</main>

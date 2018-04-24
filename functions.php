@@ -50,9 +50,9 @@
 	// sidebar
 	function quickly_register_sidebar() {
 		$args = array(
-			'name'          => __( "Quickly's Sidebar", 'quicklytheme' ),
+			'name'          => __( "Quickly's Sidebar", 'quickly' ),
 			'id'            => 'quickly-sidebar',
-			'description'   => __("Flexible, Lightweight and Minimal sidebar for your website by Quickly", 'quicklytheme' )
+			'description'   => __("Flexible, Lightweight and Minimal sidebar for your website by Quickly", 'quickly' )
 		);
 		
 		// check whether the sidebar has been activated or not by the user
@@ -149,13 +149,13 @@
             if ( $args['avatar_size'] != 0 ) {
                 echo get_avatar( $comment, 150, $default, $alt, array( 'class' => array( 'img-thumbnail', 'rounded-circle' ) ) ); 
             } 
-            printf( __( '<cite class="fn">%s</cite>', 'quicklytheme' ), get_comment_author_link() ); ?>
+            printf( __( '<cite class="fn">%s</cite>', 'quickly' ), get_comment_author_link() ); ?>
         </div>
 
         <?php comment_text(); ?>
         <?php 
         if ( $comment->comment_approved == '0' ) { ?>
-            <p class="comment-awaiting-moderation"><em style="opacity: .5;"><?php _e( 'Your comment is awaiting moderation.', 'quicklytheme' ); ?></em></p><?php 
+            <p class="comment-awaiting-moderation"><em style="opacity: .5;"><?php _e( 'Your comment is awaiting moderation.', 'quickly' ); ?></em></p><?php 
         } ?>
 
         <div class="reply"><?php 
@@ -219,7 +219,7 @@
 	// customization API
 	function quickly_customize_register( $wp_customize ) {
 		$wp_customize->add_section( 'quickly_customization_api' , [
-    	'title'      => __( 'Quickly', 'quicklytheme' ),
+    	'title'      => __( 'Quickly', 'quickly' ),
     	'priority'   => 30,
 		]);
 
@@ -228,8 +228,8 @@
 
 		$wp_customize->add_control(new WP_Customize_Image_Control( 
 			$wp_customize, 'header_main_cover', [
-				'label'      	=> __( 'Main Cover', 'quicklytheme' ),
-				'description' => __( 'Set a cover image that all your visitors will see...', 'quicklytheme' ),
+				'label'      	=> __( 'Main Cover', 'quickly' ),
+				'description' => __( 'Set a cover image that all your visitors will see...', 'quickly' ),
 				'section'    	=> 'quickly_customization_api',
 				'settings'   	=> 'main_cover',
 			]
@@ -272,9 +272,9 @@
 					</div>
 					<div class="form-group">
 						<label class="sr-only" for="message"></label>
-						<textarea name="message" id="message" cols="30" rows="5" class="form-control" placeholder="'.__( 'Hi, i read your article about...', 'quicklytheme' ).'"></textarea>
+						<textarea name="message" id="message" cols="30" rows="5" class="form-control" placeholder="'.__( 'Hi, i read your article about...', 'quickly' ).'"></textarea>
 					</div>
-					<button type="submit" class="btn btn-outline-secondary quickly-btn">'.__( 'Get in touch!', 'quicklytheme' ).'</button>
+					<button type="submit" class="btn btn-outline-secondary quickly-btn">'.__( 'Get in touch!', 'quickly' ).'</button>
 				</form>
 			</div>';
 

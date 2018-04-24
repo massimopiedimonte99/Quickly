@@ -10,7 +10,7 @@
 		?>
 			<!-- articles -->
 			<?php if ( have_posts() ): ?>
- 				<h3 class="page-title text-center"><?php printf( __( 'Search Results for: %s', 'quicklytheme' ), '<span>' . get_search_query() . '</span>' ); ?></h3><hr>
+ 				<h3 class="page-title text-center"><?php printf( __( 'Search Results for: %s', 'quickly' ), '<span>' . get_search_query() . '</span>' ); ?></h3><hr>
 				<?php while( have_posts() ): the_post(); ?>
 					<?php get_template_part( 'template_parts/content', get_post_format() ); ?>
 				<?php endwhile; ?>
