@@ -1,6 +1,13 @@
 Quickly - Lightweight, Minimal and Flexible WordPress theme.
 -----------------------------------------------------------------
 
+[Copyright Notes]
+Quickly WordPress Theme, Copyright 2018 Massimo Piedimonte
+Quickly is distributed under the terms of the GNU GPL
+
+[Screenshot Image]
+Link: https://image.ibb.co/fpwWoc/screenshot.png
+
 [Get started]
 To get started with Quickly, you just need to download and import [this folder](https://github.com/mynameismaz/Quickly/archive/master.zip) in your WordPress dashboard, specifically in Appearance > Themes.
 

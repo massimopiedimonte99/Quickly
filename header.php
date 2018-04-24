@@ -32,23 +32,16 @@
 		   	<?php
 					wp_nav_menu( array(
 						'theme_location'	=> 'top',
-				    'depth'						=> 1,
-						'container'				=> 'ul',
-						'menu_class'			=> 'quickly-navbar-content-menu',
-				    'fallback_cb'			=> 'WP_Bootstrap_Navwalker::fallback',
-						'walker'          => new WP_Bootstrap_Navwalker
+				    	'depth'				=> 1,
+						'container'			=> 'ul',
+						'menu_class'		=> 'quickly-navbar-content-menu',
+				    	'fallback_cb'		=> 'WP_Bootstrap_Navwalker::fallback',
+						'walker'         	=> new WP_Bootstrap_Navwalker
 					) );
 		   	?>
 		   	<div class="quickly-navbar-content-searchform">
-					<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-						<div class="input-group">
-						  <input type="text" class="form-control" name="s" placeholder="Search for...">
-						  	<span class="input-group-btn">
-						    <button type="submit" class="btn btn-secondary" type="button">Go!</button>
-						  </span>
-						</div>
-					</form>
-				</div>
+				<?php get_search_form() ?>
+			</div>
 		  </section>
 		</nav>
 	</header>
